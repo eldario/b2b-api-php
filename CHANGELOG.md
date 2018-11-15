@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog][keepachangelog] and this project adheres to [Semantic Versioning][semver].
 
-## [v2.5.0] - 2018-11-14
+## v2.4.1 - 2018-11-14
 
 ### Changed
 
@@ -46,7 +46,6 @@ The format is based on [Keep a Changelog][keepachangelog] and this project adher
 
 - API backward compatible fix with passing empty data (for example - on calling `_refresh` method)
 
-[v2.5.0]:https://github.com/avto-dev/b2b-api-php/compare/v2.3.0...eldario:new-response-feature
 [v2.4.0]:https://github.com/avto-dev/b2b-api-php/compare/v2.3.0...v2.4.0
 [v2.3.0]:https://github.com/avto-dev/b2b-api-php/compare/v2.2.0...v2.3.0
 [v2.2.0]:https://github.com/avto-dev/b2b-api-php/compare/v2.1.5...v2.2.0
