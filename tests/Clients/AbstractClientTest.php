@@ -150,4 +150,25 @@ class AbstractClientTest extends AbstractClientTestCase
             'is' => 'error',
         ])));
     }
+
+    /**
+     * Тест метода `apiRequest()` на отсутствие ограничения по количеству выводимых символов в теле ошибки.
+     *
+     * @return void
+     */
+    public function testApiRequestForNoLengthLimit()
+    {
+        $message = \str_repeat('abc', 45);
+        $this->expectException(B2BApiException::class);
+        $this->expectExceptionCode(500);
+        $this->expectExceptionMessageRegExp('/^Request to .* failed with message: \"' . $message . '\"/');
+
+        $this->client->apiRequest(
+            'post',
+            'user/reports/',
+            null,
+            [],
+            $test_response = new Response(500, [], $message)
+        );
+    }
 }
